@@ -10,10 +10,6 @@
 		<?php get_header(); ?>
 		<!-- Header area end -->
 
-    <!--Main Slider-->
-    	<?php get_template_part('slider')?>
-		<!-- Slider End -->
-		
 		<?php if(have_posts()) : while (have_posts()) : the_post(); ?>
 
     <!-- News / Blog section  
