@@ -22,3 +22,27 @@
 
  add_image_size('myFituredImage', 330, 330, true);
  add_image_size('myFituredImage1', 300, true);
+
+ /**
+ * Widget Support
+ */
+function my_widgets_sidebar(){
+  register_sidebar( array(
+  'name'          => __( 'Home Page Sidebar One', 'carnews' ),
+  'id'            => 'widget-home-one',
+  'before_widget' => '<div class="siderbar-widget">',
+  'after_widget'  => '</div>',
+  'before_title'  => '<h4 class="sidebar-widget-title">',
+  'after_title'   => '</h4> ',
+) );
+
+  register_sidebar( array(
+  'name'          => __( 'Footer widget One', 'carnews' ),
+  'id'            => 'footer-one',
+  'before_widget' => '<div class="footer-widget">',
+  'after_widget'  => '</div>',
+  'before_title'  => '<h2 class="widget-title">',
+  'after_title'   => '</h2> ',
+) );
+}
+add_action( 'widgets_init', 'my_widgets_sidebar' );

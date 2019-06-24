@@ -31,6 +31,9 @@
               <?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 12,'order' => 'ASC' )); ?>
             </ul>
         </div>
+
+        <?php dynamic_sidebar('widget-home-one'); ?>
+
         <div class="siderbar-widget">
             <h4 class="sidebar-widget-title">RECENT NEWS</h4>
             <div class="widget-news">
